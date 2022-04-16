@@ -145,7 +145,9 @@ function fizzBuzz(numero) {
     return "fizz";
   }else if(numero % 5 === 0){
    return "buzz";
-  }else{return numero;}
+  }else{
+    return numero;
+  }
 }
 
 function operadoresLogicos(num1, num2, num3) {
@@ -156,14 +158,20 @@ function operadoresLogicos(num1, num2, num3) {
   //0 no es ni positivo ni negativo. Si alguno de los argumentos es 0, retornar "Error".
   //Si no se cumplen ninguna de las condiciones anteriores, retornar false. 
   if(num1 !== 0 && num2 !== 0 && num3 !== 0 ){
-    if(num1 > num2 && num1 > num3){
-      return "Numero 1 es mayor y positivo";
-    }else if(num3> num1 && num3 > num2){
-      num3++;
-      return num3;
-    }else{
-      return false;
+    if(num1 > 0 && num2 > 0 && num3 > 0 ){
+      if(num1 > num2 && num1 > num3){
+        return "Número 1 es mayor y positivo";
+      }else if(num3> num1 && num3 > num2){
+        num3++;
+        return num3;
+
+      }else{
+        return false;
     }
+    }else{
+    return "Hay negativos";
+    }
+
   }else{
     return "Error";
   }
@@ -219,7 +227,7 @@ function tablaDelSeis(){
 function tieneTresDigitos(numero){
   //Leer un número entero y retornar true si tiene 3 dígitos. Caso contrario, retorna false.
   //Escribe tu código aquí
-  if(numero > 99){
+  if(numero > 99 && numero < 1000){
     return true;
   }else{
     return false;
@@ -227,15 +235,17 @@ function tieneTresDigitos(numero){
   
 }
 
-// function doWhile(numero) {
-//   //Implementar una función tal que vaya aumentando el valor recibido en 5 hasta un límite de 8 veces
-//   //Retornar el valor final.
-//   //Usar el bucle do ... while.
-//    valorFinal = null;
-//   for(let i = 0; i<8; i++){
-//     valorFinal += 5;
-//   }
-// }
+function doWhile(numero) {
+  //Implementar una función tal que vaya aumentando el valor recibido en 5 hasta un límite de 8 veces
+  //Retornar el valor final.
+  //Usar el bucle do ... while.
+  vuelta = 0;
+  do{
+    numero += 5;
+    vuelta++;
+  }while(vuelta < 8);
+  return numero;
+}
 
 // No modificar nada debajo de esta línea
 // --------------------------------
